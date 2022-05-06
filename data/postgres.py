@@ -9,6 +9,8 @@ from sqlalchemy import create_engine
 DATA_SIZE = 400
 TABLE_NAME = 'Bioddata'
 columns = ["PatientID", "Age", "FirstName", "LastName", "Location", "DateRegistered", "Email", "EmergencyContact"]
+username = ""
+password = ""
 
 all_locations = []
 with open("state_names.txt", "r") as locations:
@@ -46,7 +48,7 @@ df['LastName'] = df['LastName'].str.title()
 # engine = create_engine("postgresql://username:pass@localhost:5432/db")
 # engine.connect()
 
-engine = create_engine("postgresql://healthdata:healthdata@localhost:5432/chainlink-rinkeby")
+engine = create_engine(f"postgresql://{username}:{password}@localhost:5432/chainlink-rinkeby")
 print(engine.connect())
 
 df.head(0).to_sql(name=TABLE_NAME, con=engine, if_exists="replace")
