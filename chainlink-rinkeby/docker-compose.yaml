@@ -19,6 +19,15 @@ services:
     volumes:
       - ~/Documents/Chainlink/chainlink-rinkeby/.chainlink-volume:/chainlink/
     command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt
+  pg_healthdata:
+    image: "postgres"
+    ports:
+      - "5433:5432"
+    env_file:
+      - healthdb.env
+    volumes:
+      - ~/Documents/Chainlink/chainlink-rinkeby/database:/var/lib/postgresql/data
+  
   pgadmin:
     image: dpage/pgadmin4
     env_file:

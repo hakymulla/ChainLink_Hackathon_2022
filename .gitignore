@@ -1,5 +1,7 @@
 chainlink-rinkeby/.chainlink-volume
 chainlink-rinkeby/.data
+chainlink-rinkeby/database
 chainlink-rinkeby/.env
 chainlink-rinkeby/database.env
 chainlink-rinkeby/pg_admin.env
+chainlink-rinkeby/healthdb.env

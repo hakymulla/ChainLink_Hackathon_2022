@@ -30,7 +30,7 @@ res_dates = [test_date1]
 while test_date1 != test_date2:
     test_date1 += timedelta(days=1)
     res_dates.append(test_date1)
-
+print("Pyttttttttthhhhhon")
 df["PatientID"] = list(range(1, DATA_SIZE+1))
 df["Age"] = random.choices(range(10, 80), k=DATA_SIZE)
 df["FirstName"] = random.choices(all_names, k=DATA_SIZE)
@@ -48,7 +48,7 @@ df['LastName'] = df['LastName'].str.title()
 # engine = create_engine("postgresql://username:pass@localhost:5432/db")
 # engine.connect()
 
-engine = create_engine(f"postgresql://{username}:{password}@localhost:5432/chainlink-rinkeby")
+engine = create_engine(f"postgresql://{username}:{password}@localhost:5433/healthdatabase")
 print(engine.connect())
 
 df.head(0).to_sql(name=TABLE_NAME, con=engine, if_exists="replace")
