@@ -5,3 +5,9 @@ chainlink-rinkeby/.env
 chainlink-rinkeby/database.env
 chainlink-rinkeby/pg_admin.env
 chainlink-rinkeby/healthdb.env
+orbit_db/orbit_py_js/node_nodules
+orbit_db/orbit_py_js/ipfs
+orbit_db/orbit_py_js/orbitdb
+orbit_db/orbit_py_js/package-lock.json
+orbit_db/orbit_py_js/yarn.json
+orbit_db/env
