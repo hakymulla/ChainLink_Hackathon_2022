@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@chainlink/external-adapter": "^0.2.3",
+    "@jsonlines/core": "^1.0.2",
     "ipfs": "^0.62.3",
-    "orbit-db": "^0.28.6"
+    "orbit-db": "^0.28.6",
+    "pg": "^8.7.3"
   },
   "devDependencies": {
     "body-parser": "^1.19.0",

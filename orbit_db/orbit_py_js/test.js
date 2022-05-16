@@ -2,7 +2,7 @@ const {create} = require('ipfs')
 const {createInstance} = require('orbit-db')
 const {spawn} = require('child_process')
 console.log(process.cwd())
-const orbit_address = "/orbitdb/zdpuAu32dvAKtyfkzSAR7movVZVe3vrkyXNn8BypEXcuQmrAS/orbit.patient"
+const orbit_address = "/orbitdb/zdpuAxDBDJPeghLGDfwbFwrXJZJkJ21C6PnitNMfU5tfimzi9/orbit.Bioddata"
 
 async function main () {
     const ipfsOptions = { repo : './ipfs', }
@@ -14,7 +14,7 @@ async function main () {
     const db2 = await orbitdb.open(orbit_address)
     await db2.load()
     // const profile = db2.query((doc) => doc.Age >= 30 & doc.Age <= 75)
-    const profile = db2.get(2)
+    const profile = db2.get("300")
     console.log("Value: ", profile)
 
     
@@ -25,6 +25,10 @@ async function main () {
     // console.log("Value: ", profile2)
     // console.log(status)
     // return profile
+
+     // const db2 = await orbitdb.docs(address.toString())
+    // await db2.load()
+    // const profile = db2.query((doc) => doc.Age >= 30 & doc.Age <= 75)
 
   }
 
