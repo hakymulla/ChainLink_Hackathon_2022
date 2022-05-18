@@ -3,6 +3,8 @@ const {createInstance} = require('orbit-db')
 const {spawn} = require('child_process')
 console.log(process.cwd())
 const orbit_address = "/orbitdb/zdpuAxDBDJPeghLGDfwbFwrXJZJkJ21C6PnitNMfU5tfimzi9/orbit.Bioddata"
+const jsonFile = require("./Databases.json");
+console.log(jsonFile['Bioddata']);
 
 async function main () {
     const ipfsOptions = { repo : './ipfs', }
@@ -32,4 +34,4 @@ async function main () {
 
   }
 
-main()
+// main()

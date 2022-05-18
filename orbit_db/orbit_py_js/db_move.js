@@ -12,7 +12,7 @@ var client = new pg.Client(connstr)
 const tables = {
   "Bioddata": 'PatientID',
   "Physician": 'PhysicianID',
-  "Prescription": "Medication"
+  "Prescription": "PatientID"
 }
 
 async function main () {
@@ -56,7 +56,7 @@ async function main () {
   }
    await client.end()
 
-  fs.writeFile('Databases.txt', JSON.stringify(databases), (err) => {
+  fs.writeFile('Databases.json', JSON.stringify(databases), (err) => {
     if (err) throw err;
   })
 

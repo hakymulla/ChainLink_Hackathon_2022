@@ -1,9 +1,9 @@
-// const { Requester, Validator } = require('@chainlink/external-adapter')
 var express = require('express');
 var router = express.Router();
 const {create} = require('ipfs')
 const {createInstance} = require('orbit-db')
-const orbit_address = "/orbitdb/zdpuAxDBDJPeghLGDfwbFwrXJZJkJ21C6PnitNMfU5tfimzi9/orbit.Bioddata"
+const jsonFile = require("../Databases.json");
+const orbit_address = jsonFile['Physician']
 
 async function get_orbit (n) {
     const ipfsOptions = { repo : './ipfs', }
@@ -20,14 +20,14 @@ async function get_orbit (n) {
     await ipfs.stop()
     console.log("sent")
     console.log("profile[0]:", profile[0])
-    return profile[0]
+    return profile
   }
 
 var routes = function () {
       router.route('/')
           .post(function (req, res) {
-            console.log("req.body:", req.body.data.PatientID)
-            get_orbit(req.body.data.PatientID).then(function(result){
+            console.log("req.body:", req.body.data.PhysicianID)
+            get_orbit(req.body.data.PhysicianID).then(function(result){
                 res.send(result)
               }) 
             })

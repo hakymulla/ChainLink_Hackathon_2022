@@ -3,7 +3,8 @@ var express = require('express');
 var router = express.Router();
 const {create} = require('ipfs')
 const {createInstance} = require('orbit-db')
-const orbit_address = "/orbitdb/zdpuAxDBDJPeghLGDfwbFwrXJZJkJ21C6PnitNMfU5tfimzi9/orbit.Bioddata"
+const jsonFile = require("../Databases.json");
+const orbit_address = jsonFile['Prescription']
 
 async function get_orbit (n) {
     const ipfsOptions = { repo : './ipfs', }

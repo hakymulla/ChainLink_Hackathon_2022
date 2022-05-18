@@ -10,4 +10,6 @@ orbit_db/orbit_py_js/ipfs
 orbit_db/orbit_py_js/orbitdb
 orbit_db/orbit_py_js/package-lock.json
 orbit_db/orbit_py_js/yarn.json
+orbit_db/orbit_py_js/.eslintrc.js
+orbit_db/orbit_py_js/.envrc.example 
 orbit_db/env
