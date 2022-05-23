@@ -13,3 +13,7 @@ orbit_db/orbit_py_js/yarn.json
 orbit_db/orbit_py_js/.eslintrc.js
 orbit_db/orbit_py_js/.envrc.example 
 orbit_db/env
+health_sol/node_modules/
+health_sol/.env
+health_sol/yarn-error.log
+health_sol/yarn.lock
