@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
 import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
@@ -122,6 +122,21 @@ contract BHealth is ChainlinkClient {
     }
 
     function setPhysicianByPateint(address _addr, string memory _patientid) public{
-        physicianPatientsMap[_addr].push(_patientid);
+        uint count = physicianPatientsMap[_addr].length;
+        if (count == 0){
+            physicianPatientsMap[_addr].push(_patientid);
+        }
+        else {
+            string[] memory patients = new string[](count);
+            patients = physicianPatientsMap[_addr];
+            for (uint i = 0; i < patients.length; i++) {
+            if (keccak256(bytes(patients[i])) == keccak256(bytes(_patientid))){
+                revert();
+            }
+            else{
+                physicianPatientsMap[_addr].push(_patientid);
+            }
+        }
+        }           
     }
 }

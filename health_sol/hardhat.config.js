@@ -44,11 +44,6 @@ module.exports = {
       chaindId: 4,
       url: process.env.RINKEBY_RPC_URL,
       accounts:[process.env.REACT_APP_PRIVATE_KEY, process.env.ALICE],
-      // timeout: 60000,
-      // gas: 21000000000,
-      // gasPrice: 80000000000000,
-      // blockGasLimit:10000000042972000000,
-      // gasLimit: 900000000000
     },
   },
 };
